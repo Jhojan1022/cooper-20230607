@@ -62,7 +62,7 @@ app.all("/iniciarActividad", actividadesController.iniciarActividad);
 app.all("/finalizarActividad", actividadesController.finalizarActividad);
 app.all("/cerrarActividades", actividadesController.cerrarActividades);
 
-const server = app.listen(port  || process.env.port, () => {
+const server = app.listen(process.env.PORT, () => {
     server.timeout = 30000; // Establece el tiempo de espera a 30 segundos
-    console.log("Servidor en puerto " + port);
+    console.log("Servidor en puerto " + process.env.PORT);
   });
