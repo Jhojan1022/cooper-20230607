@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./head'); %>
+    <%- include('./modal'); %>
+
+        <body>
+                <!--Moda-->
+                <section id="menu_princ" style="margin-bottom: 70px;">
+                        <h1>Cooper - Administrador</h1>
+                       
+                <hr>
+                        <div class="menu_adm" style="margin-top: 3vh;">
+                                <a href="#usuarios">
+                                        <div>Usuarios</div>
+                                    </a>
+                                <a href="">
+                                        <div>Actividades</div>
+                                    </a>
+                                <a href="">
+                                        <div>Coordinaciones</div>
+                                    </a>
+                                <a href="">
+                                        <div>Informes</div>
+                                    </a>
+                                <a href="">
+                                        <div>Ausencias</div>
+                                    </a>
+                            </div>
+                        <div class="menu_cant" style="margin-top: 3vh;">
+                                <div>Usuarios <br> <b>15</b></div>
+                                <div>Horarios <br> <b>15</b></div>
+                                <div>Coordinaciones <br> <b>15</b></div>
+                                <div>Roles <br> <b>15</b></div>
+                                <div>Ausencias <br> <b>15</b></div>
+                            </div>
+                   
+            </section>
+                <section id="usuarios" class="sectadm">
+                        <h2>Usuarios</h2>
+                       
+                <hr><br>
+                        <button id="crear_usuario">Crear usuarios</button>
+                        <br><br>
+                        <details>
+                                <summary>Coordinaciones</summary>
+                                <div>
+                                        <table id="coordinaciones_t">
+                                                <tr>
+                                                        <th>ID coordinación</th>
+                                                        <th>Nombre coordinación</th>
+                                                        <th>Accion</th>
+                                                    </tr>
+                                            </table>
+                                    </div>
+                            </details>
+                        <details>
+                                <summary>Agregar cargos</summary>
+                            </details>
+                        <details>
+                                <summary>Agregar roles</summary>
+                            </details>
+                        <details>
+                                <summary>Agregar usuario</summary>
+                                <br>
+                                <div>
+                                        <form action="" class="formgrid">
+                                                <div>
+                                                        <label for="">SOID</label>
+                                                        <input type="text">
+                                                    </div>
+                                                <div>
+                                                        <label for="">Nombres y apellidos</label>
+                                                        <input type="text">
+                                                    </div>
+                                                <div>
+                                                        <label for="">Rol</label>
+                                                        <select name="" id="">
+                                                                <option value="">Administrador</option>
+                                                                <option value="">Colaborador</option>
+                                                            </select>
+                                                    </div>
+                                                <div>
+                                                        <label for="">Cargo</label>
+                                                        <input type="text">
+                                                    </div>
+                                                <div>
+                                                        <label for="">Coordinación</label>
+                                                        <input type="text">
+                                                    </div>
+                                                <div>
+                                                        <label for="">Horario</label>
+                                                        <input type="text">
+                                                    </div>
+                                                <div>
+                                                        <label for="">Contraseña</label>
+                                                        <input type="text">
+                                                    </div>
+                                                <div>
+                                                        <label for="">Confirmar contraseña</label>
+                                                        <input type="text">
+                                                    </div>
+                                            </form>
+                                    </div>
+                            </details>
+                   
+            </section>
+                <section id="actividades" class="sectadm">
+                        <h2>Actividades</h2>
+                       
+                <hr>
+                   
+            </section>
+                <section id="coordinaciones" class="sectadm">
+                        <h2>Coordinaciones</h2>
+                       
+                <hr>
+                   
+            </section>
+                <section id="informes" class="sectadm">
+                        <h2>Informes</h2>
+                       
+                <hr>
+                   
+            </section>
+                <section id="ausencias" class="sectadm">
+                        <h2>Ausencias</h2>
+                       
+                <hr>
+                   
+            </section>
+               
+            <script src="js/modal.js"></script>
+               
+            <script src="js/admin.js"></script>
+        </body>
+
+</html>

@@ -1,0 +1,44 @@
+{
+    "coordinaciones": [
+        {
+            "id_coordinacion": 1,
+            "nombre_coordinacion": "Base de datos"
+        },
+        {
+            "id_coordinacion": 2,
+            "nombre_coordinacion": "Desarrollo de software"
+        },
+        {
+            "id_coordinacion": 3,
+            "nombre_coordinacion": "Gestión de proyectos"
+        },
+        {
+            "id_coordinacion": 4,
+            "nombre_coordinacion": "Marketing y publicidad"
+        },
+        {
+            "id_coordinacion": 5,
+            "nombre_coordinacion": "Recursos humanos"
+        },
+        {
+            "id_coordinacion": 6,
+            "nombre_coordinacion": "Ventas y negocios"
+        },
+        {
+            "id_coordinacion": 7,
+            "nombre_coordinacion": "Soporte técnico"
+        },
+        {
+            "id_coordinacion": 8,
+            "nombre_coordinacion": "Diseño gráfico"
+        },
+        {
+            "id_coordinacion": 9,
+            "nombre_coordinacion": "Investigación y desarrollo"
+        },
+        {
+            "id_coordinacion": 10,
+            "nombre_coordinacion": "Calidad y control de procesos"
+        }
+    ]
+}

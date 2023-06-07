@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./head'); %>
+    <%- include('./modal'); %>
+
+        <body>
+            <h1>Informes</h1>
+            <select id="filterGrafic">
+                <option value="1" default>Corte a este mes</option>
+                <option value="0">Corte a hoy</option>
+            </select>
+
+            <section id="grafics">
+                <div>
+                    <canvas id="actarea"></canvas>
+                </div>
+                <div>
+                    <canvas id="acttime"></canvas>
+                </div>
+                
+            </section>
+            <div id="coortmp" hidden>
+                <%= JSON.stringify(actividadesC) %>
+            </div>
+            <script src="js/informes.js"></script>
+        </body>
+
+</html>

@@ -1,0 +1,64 @@
+{
+    "actividades": [
+        {
+            "id_actividad": 1,
+            "nombre_actividad": "Gestionar PQR's",
+            "descripcion_actividad": "X",
+            "unidad_medida": "Afiliado"
+        },
+        {
+            "id_actividad": 2,
+            "nombre_actividad": "Realizar seguimiento de ventas",
+            "descripcion_actividad": "X",
+            "unidad_medida": "Vendedor"
+        },
+        {
+            "id_actividad": 3,
+            "nombre_actividad": "Elaborar informes de gestión",
+            "descripcion_actividad": "X",
+            "unidad_medida": "Empleado"
+        },
+        {
+            "id_actividad": 4,
+            "nombre_actividad": "Desarrollar estrategias de marketing",
+            "descripcion_actividad": "X",
+            "unidad_medida": "Especialista en marketing"
+        },
+        {
+            "id_actividad": 5,
+            "nombre_actividad": "Brindar soporte técnico a clientes",
+            "descripcion_actividad": "X",
+            "unidad_medida": "Técnico de soporte"
+        },
+        {
+            "id_actividad": 6,
+            "nombre_actividad": "Realizar análisis financiero",
+            "descripcion_actividad": "X",
+            "unidad_medida": "Analista financiero"
+        },
+        {
+            "id_actividad": 7,
+            "nombre_actividad": "Coordinar eventos y conferencias",
+            "descripcion_actividad": "X",
+            "unidad_medida": "Coordinador de eventos"
+        },
+        {
+            "id_actividad": 8,
+            "nombre_actividad": "Diseñar productos gráficos",
+            "descripcion_actividad": "X",
+            "unidad_medida": "Diseñador gráfico"
+        },
+        {
+            "id_actividad": 9,
+            "nombre_actividad": "Gestionar proyectos",
+            "descripcion_actividad": "X",
+            "unidad_medida": "Gerente de proyectos"
+        },
+        {
+            "id_actividad": 10,
+            "nombre_actividad": "Realizar mantenimiento de equipos",
+            "descripcion_actividad": "X",
+            "unidad_medida": "Técnico de mantenimiento"
+        }
+    ]
+}
