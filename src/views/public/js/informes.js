@@ -239,26 +239,27 @@ function grafTiempoAct() {
         }
     }
 
-
     var data = {
         labels: l,
-        datasets: [{
-            label: 'Cantidad de horas por actividad',
-            data: d,
-            backgroundColor: 'rgba(0, 123, 255, 0.5)', // Color de fondo de las barras
-            borderColor: 'rgba(0, 123, 255, 1)', // Color del borde de las barras
-            borderWidth: 1, // Ancho del borde de las barras
-            stack: 'combined',
-            type: 'bar'
-        },
-        {
-            label: 'Cantidad de horas por actividad - linea',
-            data: d,
-            backgroundColor: '#ff7f9a', // Color de fondo de las barras
-            borderColor: 'rgba(0, 123, 255, 1)', // Color del borde de las barras
-            borderWidth: 1, // Ancho del borde de las barras
-            stack: 'combined'
-        }
+        datasets: [
+            {
+                label: 'Cantidad de horas por actividad',
+                data: d,
+                backgroundColor: 'rgba(0, 123, 255, 0.5)',
+                borderColor: 'rgba(0, 123, 255, 1)',
+                borderWidth: 1,
+                type: 'bar', // Tipo de gráfico de barras
+                yAxisID: 'bar-y-axis' // Identificador de la escala del eje Y para las barras
+            },
+            {
+                label: 'Cantidad de horas por actividad - linea',
+                data: d,
+                backgroundColor: '#ff7f9a',
+                borderColor: 'rgba(0, 123, 255, 1)',
+                borderWidth: 1,
+                type: 'line', // Tipo de gráfico de líneas
+                yAxisID: 'line-y-axis' // Identificador de la escala del eje Y para las líneas
+            }
         ]
     };
 
@@ -266,8 +267,10 @@ function grafTiempoAct() {
         myChart2.destroy();
     }
 
+    // ... Código previo ...
+
     myChart2 = new Chart(ctx2, {
-        type: 'line', // Tipo de gráfico (barras en este caso)
+        type: 'bar',
         data: data,
         options: {
             plugins: {
@@ -278,12 +281,26 @@ function grafTiempoAct() {
             },
             scales: {
                 y: {
-                    min: 0,
-                    max: Math.max(...d)
+                    id: 'bar-y-axis',
+                    beginAtZero: true,
+                    suggestedMax: Math.max(...d),
+                    ticks: {
+                        callback: function (value) {
+                            return value; // Devuelve el valor del tick sin etiqueta
+                        }
+                    },
+                    display:false
+                },
+                'line-y-axis': {
+                    beginAtZero: true,
+                    suggestedMax: Math.max(...d),
+                    display: false // Oculta las etiquetas del eje Y para las líneas
                 }
             }
         }
     });
+
+
 }
 //
 
