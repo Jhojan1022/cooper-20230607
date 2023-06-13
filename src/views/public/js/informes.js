@@ -350,9 +350,9 @@ function generarColoresAleatorios(cantidad) {
     const colores = [];
 
     for (let i = 0; i < cantidad; i++) {
-        const rojo = Math.floor(Math.random() * 256);
-        const verde = Math.floor(Math.random() * 256);
-        const azul = Math.floor(Math.random() * 256);
+        const rojo = Math.floor(Math.random() * 128); // Rango de 0 a 127
+        const verde = Math.floor(Math.random() * 128); // Rango de 0 a 127
+        const azul = Math.floor(Math.random() * 128); // Rango de 0 a 127
         const opacidad = Math.random();
 
         const colorAleatorio = `rgba(${rojo}, ${verde}, ${azul}, ${opacidad})`;
