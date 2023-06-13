@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./head'); %>
+    <%- include('./modal'); %>
+
+        <body>
+            <h1>Informes</h1>
+            <select id="filterGrafic">
+                <option value="1" default>Corte a este mes</option>
+                <option value="0">Corte a hoy</option>
+            </select>
+
+            <section id="grafics">
+                <div>
+                    <div>
+                        <canvas id="actarea"></canvas>
+                    </div>
+                    <div  style="height: 420px; width: 350px;">
+                        <canvas id="actusuact"></canvas>
+                    </div>
+                    <div>
+                        <div>text</div>
+                        <canvas></canvas>
+                    </div>
+                    <div style="display: block;">
+                        <div style="text-align: center;">Porcentaje de rendimiento por area: %</div>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <canvas id="acttime"></canvas>
+            </section>
+            <div id="coortmp" hidden>
+                <%= JSON.stringify(actividadesC) %>
+            </div>
+            <script src="js/informes.js"></script>
+        </body>
+
+</html>

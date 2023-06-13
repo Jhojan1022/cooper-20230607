@@ -1,0 +1,14 @@
+{
+    "horarios": [
+        {
+            "id_horario": 1,
+            "hora_ingreso": "08:00",
+            "hora_salida": "05:00"
+        },
+        {
+            "id_horario": 2,
+            "hora_ingreso": "07:00",
+            "hora_salida": "04:00"
+        }
+    ]
+}

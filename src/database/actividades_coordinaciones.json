@@ -1,0 +1,44 @@
+{
+    "actividades_coordinaciones": [
+        {
+            "actividades_id_actividad": 1,
+            "coordinaciones_id_coordinacion": 1
+        },
+        {
+            "actividades_id_actividad": 2,
+            "coordinaciones_id_coordinacion": 1
+        },
+        {
+            "actividades_id_actividad": 3,
+            "coordinaciones_id_coordinacion": 3
+        },
+        {
+            "actividades_id_actividad": 4,
+            "coordinaciones_id_coordinacion": 4
+        },
+        {
+            "actividades_id_actividad": 5,
+            "coordinaciones_id_coordinacion": 1
+        },
+        {
+            "actividades_id_actividad": 6,
+            "coordinaciones_id_coordinacion": 2
+        },
+        {
+            "actividades_id_actividad": 7,
+            "coordinaciones_id_coordinacion": 3
+        },
+        {
+            "actividades_id_actividad": 8,
+            "coordinaciones_id_coordinacion": 4
+        },
+        {
+            "actividades_id_actividad": 9,
+            "coordinaciones_id_coordinacion": 1
+        },
+        {
+            "actividades_id_actividad": 10,
+            "coordinaciones_id_coordinacion": 2
+        }
+    ]
+}

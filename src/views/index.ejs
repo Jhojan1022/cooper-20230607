@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<%- include('./layouts/head'); %>
+
+    <body>
+        <div id="sidebar">
+            <h2>Cooper</h2>
+            <ul>
+                <li><a href="/mi_actividad" target="view">Inicio</a></li>
+                <li><a href="/miRendimiento" target="view">Mi rendimiento</a></li>
+                <li><a href="mi_horario_y_actividades.html" target="view">Mi horario y actividades</a>
+                </li>
+                <li><a href="/informes" target="view">Informes</a></li>
+                <li><a href="/administrador" target="view">Administrador</a></li>
+                <li><a href="#" onclick="window.location.href = '/login'">Cerrar sesión</a></li>
+            </ul>
+        </div>
+        <div class="user" style="display: flex; align-items: center;">
+            <div id="user"></div>
+            <div style="margin-left: 10px; display: flex; justify-content: space-evenly;">
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+                <div>
+                    <%= user.primer_nombre + ' ' + user.segundo_nombre + ' ' + user.primer_apellido + ' ' +
+                        user.segundo_apellido%>
+                </div>
+            </div>
+        </div>
+        <dialog id="modal">
+            <h2>Este es el título de mi ventana modal</h2>
+            <p>Este es un texto de ejemplo dentro de una ventana modal</p>
+        </dialog>
+
+        <div id="content">
+            <iframe id="if" name="view" src="/mi_actividad" frameborder="0" width="98%" height="1200px"></iframe>
+        </div>
+        <!--<script src="js/index.js"></script> -->
+    </body>
+
+</html>

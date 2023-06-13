@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<%- include('./head'); %>
+    <%- include('./modal'); %>
+
+        <body>
+            <h1>Mi actividad</h1>
+            <button onclick="registrarIngreso()" id="ringreso">Registrar ingreso</button>
+            <button onclick="registrarSalida()" id="rsalida">Registrar salida</button>
+            <div>
+                <br>
+                <div id="ingreso">
+                    Fecha de ultimo ingreso: <%= estadoHorario.fecha_ingreso ? estadoHorario.fecha_ingreso : '' %>
+                </div>
+                <div id="salida">
+                    Fecha de salida: <%= estadoHorario.fecha_salida ? estadoHorario.fecha_salida : '' %>
+
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div style="display: flex; justify-content: space-between">
+                <div style="width: 50%; margin:0px">
+                    <h2>Actividades</h2>
+                    <form id="formActividad">
+                        <label for="area">Área</label>
+                        <select name="atividad" id="area">
+
+                            <option value="<%= coordinacionesM.id_coordinacion %>">
+                                <%= coordinacionesM.nombre_coordinacion %>
+                            </option>
+
+                        </select>
+                        <label for="cargo">Cargo</label>
+                        <select name="atividad" id="cargo">
+                            <option value="<%= cargos.id_cargo %>">
+                                <%= cargos.nombre_cargo %>
+                            </option>
+                        </select>
+
+                        <label for="Actividad">Actividades</label>
+                        <br>
+                        <select name="atividad" id="actividad">
+                            <% actividadesM.forEach(function(actividad) { %>
+                                <option value="<%= actividad.id_actividad %>">
+                                    <%= actividad.nombre_actividad %>
+                                </option>
+                                <% }); %>
+                        </select>
+                        <label for="observacion">Observacion</label>
+                        <input type="text" id="observaciones">
+                        <button type="button" onclick="iniciarActividad()">Iniciar actividad</button>
+                    </form>
+                </div>
+                <div style="width: 50%; border-left: solid rgb(177, 177, 177) 1px; padding-left: 30px;">
+                    <h2>Actividades en curso</h2>
+                    <div id="actividadesUsuario">
+                        <table id="actividadesUsuarioTable">
+                            <tr>
+                                <th>Nombre actividad</th>
+                                <th>Fecha inicio</th>
+                                <th>Duración</th>
+                                <th>Cantidad</th>
+                                <th>Acción</th>
+                            </tr>
+                            <% actividadesACT.forEach(function(actividad) { %>
+                                <tr>
+                                    <td>
+                                        <%= actividad.nombre_actividad %>
+                                    </td>
+                                    <td>
+                                        <%= actividad.fecha_inicio %>
+                                    </td>
+                                    <td id="timer<%= actividad.id_actividad %>">
+                                        <script>
+                                            setTimeout(() => {
+                                                setInterval(() => {
+                                                    duracionActividad('<%= actividad.fecha_inicio %>', '<%= actividad.id_actividad %>');
+                                                }, 1000);
+                                            }, 500)
+
+                                        </script>
+                                    </td>
+                                    <td style="text-align: center; align-items: center;">
+                                        <%= actividad.unidad_medida %>
+                                            <input type="number" style="width: 50%; margin: auto;">
+                                    </td>
+                                    <td>
+                                        <button
+                                            onclick="finalizarActividad('<%= actividad.id_actividad %>')">Finalizar</button>
+                                    </td>
+                                </tr>
+                                <% }); %>
+                        </table>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <% let actividades = actividadesACT %>
+            <% console.log(actividades) %>
+
+                <script>
+
+                    let userD = {
+                        id_usuario: '<%= user.id_usuario %>',
+                        primer_nombre: '<%= user.primer_nombre %>',
+                        segundo_nombre: '<%= user.segundo_nombre %>',
+                        primer_apellido: '<%= user.primer_apellido %>',
+                        segundo_apellido: '<%= user.segundo_apellido %>',
+                        rol: '<%= user.rol %>',
+                        cargo: '<%= user.cargo %>',
+                        coordinacion: '<%= user.coordinacion %>',
+                        horario: '<%= user.horario %>',
+                        contrasena: '<%= user.contrasena %>',
+                        fechaIngreso: '<%= estadoHorario.fecha_ingreso %>',
+                        fechaSalida: '<%= estadoHorario.fecha_salida %>',
+                    }
+
+                </script>
+                <script src="js/modal.js"></script>
+                <script src="js/mi_actividad.js"></script>
+        </body>

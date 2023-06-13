@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./head'); %>
+    <%- include('./modal'); %>
+
+        <body>
+
+
+            <div class="usuarioMR" hidden>
+                <p>Usuario: <%= user.id_usuario %>
+                </p>
+                <p>Nombres: <%= user.primer_nombre %>
+                        <%= user.segundo_nombre %>
+                </p>
+                <p>Apellidos: <%= user.primer_apellido %>
+                        <%= user.segundo_apellido %>
+                </p>
+            </div>
+
+            <h1>Mi rendimiento</h1>
+            <hr>
+
+            <h2>Graficos de rendimiento</h2>
+            <section id="graficosActividadesin" style="height: 40vh;">
+                <canvas id="gfcotiempoact"></canvas>
+            </section>
+            <br><br>
+
+            <section id="actividadesH">
+                <h2>Historico de actividades</h2>
+                <table>
+                    <tr>
+                        <th class="table-resalt">ID actividad</th>
+                        <th class="table-resalt">Nombre de la actividad</th>
+                        <th class="table-resalt">Fecha inicio</th>
+                        <th class="table-resalt">Fecha fin</th>
+                        <th class="table-resalt">Duración</th>
+                        <th class="table-resalt">Unidad de medida</th>
+                        <th class="table-resalt">Cantidad</th>
+                        <th class="table-resalt">Observación 1</th>
+                        <th class="table-resalt">Observación 2</th>
+                    </tr>
+                    <% actividades.forEach(function(actividad) { %>
+                        <tr>
+                            <td>
+                                <%= actividad.actividad %>
+                            </td>
+                            <td>
+                                <%= actividad.nombre_actividad %>
+                            </td>
+                            <td>
+                                <%= actividad.fecha_inicio %>
+                            </td>
+                            <td>
+                                <%= actividad.fecha_fin %>
+                            </td>
+                            <td></td>
+                            <td>
+                                <%= actividad.unidad_medida %>
+                            </td>
+                            <td>5</td>
+                            <td>
+                                <%= actividad.observacion1 %>
+                            </td>
+                            <td>
+                                <%= actividad.observacion2 %>-
+                            </td>
+                        </tr>
+                        <% }); %>
+                </table>
+
+                <div id="contActividades" hidden>
+                    <%= JSON.stringify(actividades) %>
+                </div>
+
+            </section>
+
+            <script>
+
+                let userData = {
+                    usuario: '<%= user.id_usuario %>',
+                    nombre: '<%= user.primer_nombre %> <%= user.segundo_nombre %>',
+                    apellido: '<%= user.primer_nombre %> <%= user.segundo_nombre %>',
+                    rol: '<%= user.rol %>',
+                    cargo: '<%= user.cargo %>',
+                    coordinacion: '<%= user.coordinacion %>',
+                    horario: '<%= user.horario %>',
+                    contrasena: '<%= user.contrasena %>',
+                    fechaIngreso: '<%= estadoHorario.fecha_ingreso %>',
+                    fechaSalida: '<%= estadoHorario.fecha_salida %>',
+                }
+            </script>
+            <script src="js/mi_rendimiento.js"></script>
+        </body>
+
+</html>

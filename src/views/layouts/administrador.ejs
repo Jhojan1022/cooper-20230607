@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./head'); %>
+    <%- include('./modal'); %>
+
+        <body>
+            <!--Moda-->
+            <section id="menu_princ" style="margin-bottom: 70px;">
+                <h1>Cooper - Administrador</h1>
+                <hr>
+                <div class="menu_adm" style="margin-top: 3vh;">
+                    <a href="#usuarios">
+                        <div>Usuarios</div>
+                    </a>
+                    <a href="">
+                        <div>Actividades</div>
+                    </a>
+                    <a href="">
+                        <div>Coordinaciones</div>
+                    </a>
+                    <a href="">
+                        <div>Informes</div>
+                    </a>
+                    <a href="">
+                        <div>Ausencias</div>
+                    </a>
+                </div>
+                <div class="menu_cant" style="margin-top: 3vh; text-align: center;">
+                    <div>Usuarios <br> <b><%= usuariosM.usuarios.length%></b></div>
+                    <div>Horarios <br> <b><%= horarios.horarios.length%></b></div>
+                    <div>Coordinaciones <br> <b><%= coordinaciones.coordinaciones.length%></b></div>
+                    <div>Roles <br> <b><%= roles.roles.length%></b></div>
+                    <div>Ausencias <br> <b>-</b></div>
+                </div>
+
+            </section>
+            <section id="usuarios" class="sectadm">
+                <h2>Usuarios</h2>
+
+                <hr><br>
+                <button id="crear_usuario">Crear usuarios</button>
+                <br><br>
+                <div style="display: auto; margin: auto">
+                    <table>
+                        <tr>
+                            <th>ID usuario</th>
+                            <th>Nombres y apellidos</th>
+                            <th>Rol</th>
+                            <th>Cargo</th>
+                            <th>Coordinación</th>
+                            <th>Horario</th>
+                        </tr>
+                        <% usuariosM.usuarios.forEach(function(usu) { %>
+                            <tr>
+                                <td><%= usu.id_usuario %></td>
+                                <td><%= usu.primer_nombre %> <%= usu.segundo_nombre %> <%= usu.primer_apellido %> <%= usu.segundo_apellido %></td>
+                            </tr>
+                        <% }); %>
+                    </table>
+                </div>
+            </section>
+
+            <div hidden>
+                <div id="roles">
+                    <%= JSON.stringify(roles) %>
+                </div>
+                <div id="cargos">
+                    <%= JSON.stringify(cargos) %>
+                </div>
+                <div id="coordinaciones">
+                    <%= JSON.stringify(coordinaciones) %>
+                </div>
+                <div id="horarios">
+                    <%= JSON.stringify(horarios) %>
+                </div>
+                <div id="usuariosM">
+                    <%= JSON.stringify(usuariosM) %>
+                </div>
+            </div>
+            <script src="js/modal.js"></script>
+
+            <script src="js/admin.js"></script>
+        </body>
+
+</html>

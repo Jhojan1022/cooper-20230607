@@ -1,0 +1,25 @@
+{
+    "cargos": [
+      {
+        "id_cargo": 1,
+        "nombre_cargo": "Auxiliar de base de datos"
+      },
+      {
+        "id_cargo": 2,
+        "nombre_cargo": "Desarrollador de software"
+      },
+      {
+        "id_cargo": 3,
+        "nombre_cargo": "Gerente de proyectos"
+      },
+      {
+        "id_cargo": 4,
+        "nombre_cargo": "Especialista en marketing"
+      },
+      {
+        "id_cargo": 5,
+        "nombre_cargo": "Analista de datos"
+      }
+    ]
+  }
+  
